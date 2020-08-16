@@ -91,10 +91,14 @@ int main()
 		cout<<"Element "<<element <<" pushed\n";
 	else
 		cout<<"Element can't be pushed\n";
-
+	//Front element
+	if (inspectFront(&Q1, element) == true)
+		cout<<"Topmost element = " << element<<endl;
+	else
+		cout<<"Empty Queue\n";
 	//Popping element
 	if (removeFront(&Q1, element) == true)
-		cout<<"Element "<<element<<" popped\n";
+		cout<<"Element: "<<element<<" popped\n";
 	else
 		cout<<"Element can't be popped\n";
 
