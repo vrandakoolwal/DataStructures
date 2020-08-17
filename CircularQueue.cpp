@@ -92,11 +92,13 @@ int main()
 		cout<<"Element "<<element <<" pushed\n";
 	else
 		cout<<"Element can't be pushed\n";
+
 	element ='R';
 	if (enqueue(&Q1, element) == true)
 		cout<<"Element "<<element <<" pushed\n";
 	else
 		cout<<"Element can't be pushed\n";
+
 	element ='Y';
 	if (enqueue(&Q1, element) == true)
 		cout<<"Element "<<element <<" pushed\n";
@@ -118,22 +120,27 @@ int main()
 		cout<<"Element: "<<element<<" removed\n";
 	else
 		cout<<"Element can't be removed\n";
+
 	if (inspectFront(&Q1, element) == true)
 		cout<<"Head element = " << element<<endl;
 	else
 		cout<<"Empty Queue\n";
+
 	if (dequeue(&Q1, element) == true)
 		cout<<"Element: "<<element<<" removed\n";
 	else
 		cout<<"Element can't be removed\n";
+
 	if (inspectFront(&Q1, element) == true)
 		cout<<"Head element = " << element<<endl;
 	else
 		cout<<"Empty Queue\n";
+
 	if (dequeue(&Q1, element) == true)
 		cout<<"Element: "<<element<<" removed\n";
 	else
 		cout<<"Element can't be removed\n";
+	
 	if (inspectFront(&Q1, element) == true)
 		cout<<"Head element = " << element<<endl;
 	else
