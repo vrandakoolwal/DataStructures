@@ -27,7 +27,7 @@ bool inspectFront(Queue *Q, char &element)
 		return true;
 	}
 }
-bool Insert(Queue *Q, char value)
+bool enqueue(Queue *Q, char value)
 {
 	struct Node *temp;
 	temp = (struct Node *)malloc(sizeof(struct Node));
@@ -52,7 +52,7 @@ bool Insert(Queue *Q, char value)
 	}
 	return true;
 }
-bool removeFront(Queue *Q, char &element)
+bool dequeue(Queue *Q, char &element)
 {
 	if (isEmpty(Q))
 		return false;
@@ -74,49 +74,48 @@ int main()
 	if (isEmpty(&Q1) == true)
 		cout<<"Empty Queue\n";
 	element ='F';
-	//Insert element
-	if (Insert(&Q1, element) == true)
-		cout<<"Element "<<element <<" pushed\n";
+	//enqueue
+	if (enqueue(&Q1, element) == true)
+		cout<<"Element "<<element <<" enqueued\n";
 	else
-		cout<<"Element can't be pushed\n";
+		cout<<"Element can't be enqueued\n";
 
 	element = 'R';
-	if (Insert(&Q1, element) == true)
-		cout<<"Element "<<element <<" pushed\n";
+	if (enqueue(&Q1, element) == true)
+		cout<<"Element "<<element <<" enqueued\n";
 	else
-		cout<<"Element can't be pushed\n";
+		cout<<"Element can't be enqueued\n";
 
-	cin>>element;
-	if (Insert(&Q1, element) == true)
-		cout<<"Element "<<element <<" pushed\n";
+	element = 'Y';
+	if (enqueue(&Q1, element) == true)
+		cout<<"Element "<<element <<" enqueued\n";
 	else
-		cout<<"Element can't be pushed\n";
+		cout<<"Element can't be enqueued\n";
+
 	element = 'P';
-	if (Insert(&Q1, element) == true)
-		cout<<"Element "<<element <<" pushed\n";
+	if (enqueue(&Q1, element) == true)
+		cout<<"Element "<<element <<" enqueued\n";
 	else
-		cout<<"Element can't be pushed\n";
+		cout<<"Element can't be enqueued\n";
 	// Front element
 	if (inspectFront(&Q1, element) == true)
 		cout<<"Topmost element = " << element<<endl;
 	else
 		cout<<"Empty Queue\n";
-	//Popping element
-	if (removeFront(&Q1, element) == true)
-		cout<<"Element: "<<element<<" popped\n";
+	//dequeue
+	if (dequeue(&Q1, element) == true)
+		cout<<"Element: "<<element<<" removed\n";
 	else
-		cout<<"Element can't be popped\n";
+		cout<<"Element can't be removed\n";
 
-	
-
-	if (removeFront(&Q1, element) == true)
-		cout<<"Element: "<<element<<" popped\n";
+	if (dequeue(&Q1, element) == true)
+		cout<<"Element: "<<element<<" removed\n";
 	else
-		cout<<"Element can't be popped\n";
+		cout<<"Element can't be removed\n";
 
-	if (removeFront(&Q1, element) == true)
-		cout<<"Element: "<<element<<" popped\n";
+	if (dequeue(&Q1, element) == true)
+		cout<<"Element: "<<element<<" removed\n";
 	else
-		cout<<"Element can't be popped\n";
+		cout<<"Element can't be removed\n";
 
 }
