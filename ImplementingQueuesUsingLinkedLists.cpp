@@ -31,9 +31,6 @@ bool Insert(Queue *Q, char value)
 {
 	struct Node *temp;
 	temp = (struct Node *)malloc(sizeof(struct Node));
-	if (temp == NULL)
-		return false;
-
 	temp->info = value;
 
 	if (Q->front == NULL)
