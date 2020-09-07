@@ -59,6 +59,15 @@ bool Pop(Stack *S, char &value)
 		return true;
 	}
 }
+
+void deleteStack(Stack *S)
+{	
+	char element;
+	while (!IsEmpty(S))
+	{
+		Pop(S, element);
+	}
+}
 int main()
 {
 	Stack S;
@@ -69,6 +78,9 @@ int main()
 		cout<<"Empty Stack\n";
 
 	element = 'F';
+	if (Push( &S, element) == true)
+		cout<<"element pushed.\n";
+	element = 'W';
 	if (Push( &S, element) == true)
 		cout<<"element pushed.\n";
 	element = 'R';
@@ -82,4 +94,6 @@ int main()
 	Top(&S, element);
 	cout<<element<<endl;
 
+	deleteStack(&S);
+	
 }
